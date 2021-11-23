@@ -1,9 +1,8 @@
 <div style="display: flex;justify-content:space-between;">
   <h1>Book Section </h1>
-  <div> <a class="btn btn-primary" [routerLink]="['/books/new']">Add New Book</a>
-
+  <div> 
+    <a class="btn btn-primary" [routerLink]="['/books/new']">Add New Book</a>
   </div>
-
 </div>
 <div class="form-group">
   <input class="form-control" #newquery (keyup)="submit(newquery.value)" (keyup.Enter)="submit(newquery.value)"

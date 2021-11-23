@@ -1,9 +1,12 @@
 const mongoose = require('mongoose');
 const Book = require('./api/models/book');
+const DBURL = 'mongodb://localhost/books';
+// If using Docker env, replace the DBURL by the following
+// const DBURL = 'mongodb://root:root@127.0.0.1:27017/books?authSource=admin'
 class DB {
   constructor() {
     mongoose
-      .connect('mongodb://root:root@127.0.0.1:27017/books?authSource=admin', {
+      .connect(DBURL, {
         useNewUrlParser: true,
         useUnifiedTopology: true
       })
