@@ -2,11 +2,11 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const cors = require('cors');
+require('dotenv').config()
 const DB = require('./db');
 const db = new DB();
 const app = express();
-// const __dirname=environment;
-require('dotenv').config({ path: __dirname + '/.env' });
+
 
 app.use(cors());
 app.use(morgan('dev'));
@@ -18,7 +18,6 @@ const authorRoutes = require('./api/routes/authors');
 const genreRoutes = require('./api/routes/genres');
 const bookRoutes = require('./api/routes/books');
 const userRoutes = require('./api/routes/users');
-
 
 app.use('/users', userRoutes);
 app.use('/books', bookRoutes);
