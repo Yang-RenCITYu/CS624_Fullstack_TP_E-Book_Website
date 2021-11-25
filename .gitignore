@@ -72,6 +72,8 @@ typings/
 # dependencies
 /*/node_modules
 Server/*.env
+Server/uploads/*
+!Server/uploads/test.txt
 
 # profiling files
 chrome-profiler-events.json
