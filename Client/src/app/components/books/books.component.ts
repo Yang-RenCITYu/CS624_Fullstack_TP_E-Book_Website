@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { BookstoreService, Book } from 'src/app/services/bookstore.service';
 import { Router, ActivatedRoute } from '@angular/router';
+import { BookstoreService, Book } from 'src/app/services/bookstore.service';
+import { books } from './books';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -9,21 +10,31 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./books.component.css']
 })
 export class BooksComponent implements OnInit, OnDestroy {
+
+  books = books;
+  constructor(
+    private storeServ: BookstoreService,
+    private router: Router,
+    private route: ActivatedRoute,
+  ){
+    this.route.queryParams.subscribe(params => {
+       this.query = params['title'] || ''; 
+    });
+  }
+
   ngOnDestroy(): void {
     this.bookSub.unsubscribe();
   }
   query;
-  books: Book[];
   bookSub = new Subscription();
-  constructor(private storeServ: BookstoreService, private router: Router, private route: ActivatedRoute) {
-    this.route.queryParams.subscribe(params => { this.query = params['title'] || ''; });
-  }
+
+  
   ngOnInit() {
-    this.storeServ.getBooks();
-    this.bookSub = this.storeServ.BooksChanged.subscribe(res => {
-      this.books = res;
-      console.log(this.books);
-    });
+    // this.storeServ.getBooks();
+    // this.bookSub = this.storeServ.BooksChanged.subscribe(res => {
+    //   this.books = res;
+    //   console.log(this.books);
+    // });
   }
   submit(query) {
     this.router.navigate(['books'],
