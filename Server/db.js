@@ -1,10 +1,9 @@
 const mongoose = require('mongoose');
 const Book = require('./api/models/book');
-
 class DB {
   constructor() {
     mongoose
-      .connect(process.env.DBURL, {
+      .connect('mongodb://root:root@127.0.0.1:27017/books?authSource=admin', {
         useNewUrlParser: true,
         useUnifiedTopology: true
       })
