@@ -1,3 +1,33 @@
-.display-nav-block{
-display: block;
+.navbar-brand {
+    color: white;
+    font-size: 20px;
+    font-family: 'Bungee-Regular';
+}
+
+.navbar-brand:hover {
+    color: white;
+}
+
+.navbar-nav > .active > a {
+    color: white; 
+}
+
+.nav-item > a {
+    color: #bbbbbb;
+}
+
+.nav-item > a:hover {
+    color: white;
+}
+
+
+.nav-link {
+    color: white;
+    font-size: 14px;
+    font-family: 'Bungee-Regular';
+}
+
+.navbar-toggler {
+    background-color: white;
+    font-family: 'Bungee-Regular';
 }

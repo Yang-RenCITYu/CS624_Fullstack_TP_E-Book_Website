@@ -7,26 +7,26 @@ import { AuthService, User } from 'src/app/services/auth.service';
   styleUrls: ['./nav.component.css']
 })
 export class NavComponent implements OnInit {
-  openav = false;
-  loggedUser: User;
-  isLogin;
+  // openav = false;
+  // loggedUser: User;
+  // isLogin;
   constructor(private authServ: AuthService) { }
 
-  ngOnInit() {
-    this.authServ.userChange.subscribe(user => {
-      if (user == null) {
-        this.loggedUser = null;
-        this.isLogin = false;
-      } else {
-        this.loggedUser = user;
-        this.isLogin = true;
-      }
-    }, err => {
-      console.log('err' + err);
-    });
+  ngOnInit() {    
+    // this.authServ.userChange.subscribe(user => {
+    //   if (user == null) {
+    //     this.loggedUser = null;
+    //     this.isLogin = false;
+    //   } else {
+    //     this.loggedUser = user;
+    //     this.isLogin = true;
+    //   }
+    // }, err => {
+    //   console.log('err' + err);
+    // });
   }
-  onLogout() {
-    this.authServ.logout();
-  }
+  // onLogout() {
+  //   this.authServ.logout();
+  // }
 
 }

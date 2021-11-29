@@ -12,6 +12,7 @@ const storage = multer.diskStorage({
     cb(null, new Date().toISOString().replace(/:/g, '-') + file.originalname);
   }
 });
+
 const fileFilter = (req, file, cb) => {
   if (file.mimetype === 'image/jpeg' || file.mimetype == 'image/png') {
     cb(null, true);
@@ -22,6 +23,7 @@ const fileFilter = (req, file, cb) => {
     );
   }
 };
+
 const upload = multer({
   storage: storage,
   limits: {
@@ -29,6 +31,7 @@ const upload = multer({
   },
   fileFilter: fileFilter
 });
+
 router.get('/', (req, res, next) => {
   Author.find()
     .exec()
@@ -39,9 +42,8 @@ router.get('/', (req, res, next) => {
       res.status(500).json({ error: err });
     });
 });
+
 router.post('/', upload.single('file'), (req, res, next) => {
-
-
   const birthDate = req.body.date_of_birth;
   const deathDate = req.body.date_of_death;
   const author = new Author({

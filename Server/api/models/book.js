@@ -9,7 +9,7 @@ var bookSchema = new Schema({
   summary: { type: String, required: true },
   isbn: { type: String, required: true },
   genre: [{ type: Schema.Types.ObjectId, ref: 'Genre' }],
- Image: { type: String ,required:true}
+  Image: { type: String ,required:true}
 });
 // bookSchema.add( );
 // console.log(bookSchema);

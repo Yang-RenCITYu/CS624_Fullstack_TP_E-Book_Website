@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* body background */
+body {
+    background-image: url('assets/background/greek-vase.png');
+    background-repeat: repeat;
+}
+
+.btn-primary{
+    font-family: 'Bungee-Regular';
+    font-size: 14px;
+    background-color: #6C63FF !important;
+    color: white;
+    border-radius: 8px;
+    border: none !important;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.2);
+}
+
+.btn-primary:hover {
+    background-color:#7C73FF !important;
+}

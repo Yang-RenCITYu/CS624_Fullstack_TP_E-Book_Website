@@ -21,14 +21,16 @@ export class BookstoreService {
       Image = LocalHostUrl + doc.Image;
     }
     return {
-
-      id: doc._id,
-      title: doc.title,
-      summary: doc.summary,
-      author: doc.author,
-      isbn: doc.isbn,
-      genre: doc.genre,
-      Image: Image,
+      _id: doc._id,
+      bookTitle: doc.bookTitle,
+      authors: doc.authors,
+      imagePath: Image,
+      bookCategory: doc.bookCategory,
+      // bookSize: doc.fileSize,
+      // fileType: doc.fileType,
+      publisher: doc.publisher,
+      ISBN: doc.isbn,
+      bookDescription: doc.bookDescription,
     };
   }
   mapAuthor(doc): Author {
@@ -82,14 +84,16 @@ export class BookstoreService {
         Image = LocalHostUrl + doc.Image;
       }
       return {
-
-        id: doc._id,
-        title: doc.title,
-        summary: doc.summary,
-        author: doc.author,
-        isbn: doc.isbn,
-        genre: doc.genre,
-        Image: Image,
+        _id: doc._id,
+        bookTitle: doc.bookTitle,
+        authors: doc.authors,
+        imagePath: Image,
+        bookCategory: doc.bookCategory,
+        // bookSize: doc.fileSize,
+        // fileType: doc.fileType,
+        publisher: doc.publisher,
+        ISBN: doc.isbn,
+        bookDescription: doc.bookDescription,
       };
     });
   }
@@ -148,18 +152,23 @@ export class BookstoreService {
 }
 
 export interface Book {
-  id: String,
-  title: String,
-  author: Author,
-  summary: String,
-  isbn: String,
-  genre?: Genre[],
-  Image?: String,
+  _id: String,
+  bookTitle: String,
+  authors: String[],
+  imagePath: String,
+  bookCategory: String,
+  // bookSize: Number,
+  // fileType: String,
+  publisher: String,
+  ISBN: Number,
+  bookDescription: String
 }
+
 export interface Genre {
   id: String,
   name: String,
 }
+
 export interface Author {
   id: String,
   date_of_birth?: Date,
