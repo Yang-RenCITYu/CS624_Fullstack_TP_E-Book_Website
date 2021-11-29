@@ -1,8 +1,10 @@
 const mongoose = require('mongoose');
 const Book = require('./api/models/book');
 const DBURL = 'mongodb://localhost/books';
+if (process.env.DBURL) {
+  DBURL = process.env.DBURL;
+}
 // If using Docker env, replace the DBURL by the following
-// const DBURL = 'mongodb://root:root@127.0.0.1:27017/books?authSource=admin'
 class DB {
   constructor() {
     mongoose
@@ -15,7 +17,6 @@ class DB {
           // mongoose.connection.db.dropDatabase();
           // console.log(mongoose.connection.db);
         
-
           console.log('connected To Db bookStore');
         },
         err => {
