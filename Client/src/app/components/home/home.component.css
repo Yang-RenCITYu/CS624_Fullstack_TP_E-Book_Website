@@ -1,0 +1,184 @@
+html {
+    background-color: #E5E5E5;
+    /* E-Book Home */
+  
+  
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+  
+  background: url(.png);
+  }
+  
+  body {
+  font-family: DM Serif Display;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 49px;
+  
+  color: #000000;
+  }
+  
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .container {
+    width: 940px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    padding-left: 40px;
+    padding-right: 40px;
+    box-sizing: border-box;
+  }
+  
+  header {
+    padding-top: 20px;
+    color: #617140;
+  }
+  
+  header h1 {
+  /* E-book+ Logo */
+  
+  
+  position: absolute;
+  left: 5.21%;
+  right: 87.35%;
+  top: 20.31%;
+  bottom: 20.5%;
+  
+  font-family: Bungee;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 29px;
+  display: flex;
+  align-items: center;
+  
+  color: #FFFFFF;
+  
+  }
+  
+  header p {
+    margin: 0;
+  }
+  .content-area {
+    border-top: 3px solid #e5e9dc;
+    border-bottom: 3px solid #e5e9dc;
+  }
+  
+  .main-area {
+    /* Open Source E-book Library for Sharing Knowledge */
+  
+  
+  position: static;
+  width: 617px;
+  height: 217px;
+  left: 10px;
+  top: 10px;
+  
+  font-family: Alfa Slab One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 48px;
+  line-height: 66px;
+  
+  color: #000000;
+  
+  
+  /* Inside Auto Layout */
+  
+  flex: none;
+  order: 0;
+  align-self: stretch;
+  flex-grow: 0;
+  margin: 0px 0px;
+  
+  }
+  /* Form Style */
+  form {
+    background-color: #ECECEC;
+    padding: 30px 40px;
+  }
+  .hidden-label {
+    position: absolute;
+    height: 0;
+    weight: 0;
+    overflow: hidden;
+    visibility: hidden;
+  }
+  
+  input[type="submit"] {
+   /* Search */
+  
+  
+  position: static;
+  width: 89px;
+  height: 33px;
+  left: 30.5px;
+  top: 26px;
+  
+  font-family: Alfa Slab One;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 33px;
+  /* identical to box height */
+  
+  display: flex;
+  align-items: center;
+  
+  color: #FFFFFF;
+  }
+  input[type="submit"]:hover,
+  input[type="submit"]:focus {
+    border: 1px solid: #798A56;
+    background-color:#798A56;
+  }
+  
+  footer {
+  /* E-Book+ @Shanshan Yu, Priyanka kamder, wenzhi xu, yang ren - 2021 */
+  
+  
+  position: absolute;
+  left: 0%;
+  right: -14.22%;
+  top: 0%;
+  bottom: 0%;
+  
+  /* e-book title */
+  
+  font-family: Bungee;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  /* identical to box height */
+  
+  display: flex;
+  align-items: center;
+  
+  color: #000000;
+  }
+  
+  .fix {
+    clear: both;
+  }
+  
+  .group:before,
+  .group:after {
+    content: "";
+    display: table;
+  }
+  
+  .group:after {
+    clear: both;
+  }
+  
+  .group {
+    zoom: 1;
+  }
+  

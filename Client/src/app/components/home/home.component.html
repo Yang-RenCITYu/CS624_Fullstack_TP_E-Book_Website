@@ -1,1 +1,31 @@
-<p>home page works!</p>
+<div class="container">
+    <header>
+        <h1>E-book+</h1>
+    </header>
+
+    <div class="content-area group">
+
+        <div class="main-area">
+            <h2>Open Source E-book
+                Library for Sharing
+                Knowledge
+            </h2>
+
+            <form>
+                <input type="text" name="text" id="text" placeholder="Use keywords, title, author, ISBN or more">
+                <input type="submit" value="Search">
+
+            </form>
+        </div>
+
+        <div class="fixed-buttom">
+            <router-outlet></router-outlet>
+            <footer>
+                <div class="row">
+                    <div class="col-12" style="margin-left:30px">
+                        <small><strong>&copy;E-Book+ - Shanshan Yu, Priyanka Kamder, Wenzhi Xu, Yang Ren
+                                2021</strong></small>
+                    </div>
+                </div>
+            </footer>
+        </div>
